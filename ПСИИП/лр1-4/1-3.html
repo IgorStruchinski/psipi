@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой веб-резюме</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Моё веб-резюме</h1>
+
+    <h2>Оформление текста:</h2>
+    <p>Обычный текст, <em>курсив</em>, <strong>подчеркнутый</strong>, <del>перечеркнутый</del>.</p>
+
+    <h2>Списки:</h2>
+    <ul>
+        <li>Мои навыки:
+            <ul>
+                <li>HTML</li>
+                <li>Phyton</li>
+                <li>ABCPascal</li>
+            </ul>
+        </li>
+        <li>Любимые блюда:
+            <ol>
+                <li>Фрукты</li>
+                <li>Овощи</li>
+                <li>Паста</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h2>Изображения:</h2>
+    <img src="boy.jpg" alt="Моя фотография">
+
+    <h2>Аудио-контент:</h2>
+    <audio controls>
+        <source src="Galibri & Mavik - Взгляни На Небо.mp3" type="audio/mpeg">
+    </audio>
+
+<h2>Видео-контент:</h2>
+<!-- Видео -->
+<video controls width="320" height="240">
+    <source src="sample-5s.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео тег.
+</video>
+
+    <h2>Таблицы:</h2>
+    <table border="1">
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td colspan="2">3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <h2>Пользовательские формы:</h2>
+    <!-- Пример формы для анкеты -->
+    <form action="/submit_form.php" method="post">
+        Имя: <input type="text" name="name"><br>
+        Email: <input type="email" name="email"><br>
+        <input type="submit" value="Отправить">
+    </form>
+
+    <h2>Гиперссылки:</h2>
+    <a href="https://www.youtube.com">Любимый сайт</a><br>
+    <a href="https://github.com/myprofile">Мой профиль на GitHub</a>
+
+    <h2>Спецсимволы:</h2>
+    &copy; 2024
+
+    <h2>Семантические теги:</h2>
+    <a href="#top">Вернуться в начало сайта</a>
+    <header>Шапка сайта</header>
+    <nav>Навигация</nav>
+    <main>Основное содержание</main>
+    <footer>Подвал сайта</footer>
+</body>
+</html>
