@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя информация</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    p {
+        color: blue;
+    }
+    h3 {
+        color: green;
+    }
+    ol {
+        color: red;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+</style>
+<style>
+    @import url('styles.css');
+</style>
+<style>
+    @import url('styles.css');
+</style>
+</head>
+<body>
+     <p>ФИО: Стручинский Игорь Сергеевич</p>
+    <h3>Дата рождения: 6 ноября 2004 года</h3>
+    <p>Любимые виды спорта:</p>
+    <ol type="i">
+        <li>Футбол</li>
+        <li>Баскетбол</li>
+        <li>Плавание</li>
+    </ol>
+    <a href="https://markformelle.by">Перейти на другую страницу</a>
+</body>
+</html>

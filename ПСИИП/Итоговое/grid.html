@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="app2.css">
+	<title>5-7</title>
+    <style>
+       .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 10px;
+          height: 2000px;
+        }
+
+        .grid-item {
+          background-color: red;
+          border: 1px solid black;
+        }
+
+        .grid-item:nth-child(1) {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+        }
+
+        .grid-item:nth-child(2) {
+          background-color: white;
+          grid-column: 3;
+          grid-row: 1;
+        }
+
+        .grid-item:nth-child(3) {
+          grid-column: 3;
+          grid-row: 2;
+        }
+
+        .grid-item:nth-child(4) {
+          grid-column: 1;
+          grid-row: 3;
+        }
+
+        .grid-item:nth-child(5) {
+          background-color: green;
+          grid-column: 2 / 4;
+          grid-row: 3;
+        }
+
+        .grid-item:nth-child(6) {
+          grid-column: 1;
+          grid-row: 4;
+        }
+
+        .grid-item:nth-child(7) {
+          grid-column: 2;
+          grid-row: 4;
+        }
+
+        .grid-item:nth-child(8) {
+          grid-column: 3;
+          grid-row: 4;
+        }
+
+        .grid-item:nth-child(9) {
+          grid-column: 1 / 4;
+          grid-row: 5;
+        }
+    </style>
+</head>
+
+</body>
+<div class="grid-container">
+  <div class="grid-item"></div>
+  <div class="grid-item"><section class="hero">
+    <div class="hero__container container">
+        <h1>Форма регистрации пользователя</h1>
+        <form action="#!" class="form">
+            <label for="name" class="form__label">
+                <span class="form__desc">Ваше имя:</span>
+                <input name="name" type="text" class="form__input">
+            </label>
+            <label for="password" class="form__label">
+                <span class="form__desc">Пароль:</span>
+                <input name="password" type="password" class="form__input">
+            </label>
+            <label for="age" class="form__label">
+                <span class="form__desc">Возраст:</span>
+                <input name="age" type="text" class="form__input">
+            </label>
+            <div for="sex" class="form__sex">
+                <span class="form__desc">Пол:</span>
+                <label for="sex" class="form__sex-label">
+                    <span class="form__desc">Мужской</span>
+                    <input name="sex" type="radio" class="form__radiobutton">
+                </label>
+                <label for="sex" class="form__sex-label">
+                    <span class="form__desc">Женский</span>
+                    <input name="sex" type="radio" class="form__radiobutton">
+                </label>
+            </div>
+            <div for="hobbies" class="form__hobbies">
+                <span class="form__desc">Ваши увлечения:</span>
+                <label for="hobbies" class="form__sex-label">
+                    <span class="form__desc">Музыка</span>
+                    <input name="hobbies" type="checkbox" class="form__checkbox">
+                </label>
+                <label for="hobbies" class="form__hobbies-label">
+                    <span class="form__desc">Видео</span>
+                    <input name="hobbies" type="checkbox" class="form__checkbox">
+                </label>
+                <label for="hobbies" class="form__hobbies-label">
+                    <span class="form__desc">Рисование</span>
+                    <input name="hobbies" type="checkbox" class="form__checkbox">
+                </label>
+            </div>
+            <div class="form__select">
+                <span class="form__desc">Ваша страна:</span>
+                <select name="country" id="country">
+                    <option value="Беларусь" selected disabled>Выберите страну</option>
+                    <option value="Беларусь">Беларусь</option>
+                </select>
+            </div>
+            <div class="form__select">
+                <span class="form__desc">Ваш город:</span>
+                <select name="city" id="city">
+                    <option value="Минск" selected disabled>Выберите город</option>
+                    <option value="Минск">Минск</option>
+                </select>
+            </div>
+            <div class="form__comment">
+                <span class="form__desc">Кратко о себе:</span>
+                <textarea name="comment" id="comment" cols="10" rows="10" placeholder="Краткая информация о себе"></textarea>
+            </div>
+            <div class="form__solve">
+                <span class="form__desc">Решите пример, запишите результат в поле ниже:</span>
+                <div class="form__solve-wrapper solve-form">
+                    <input type="text" class="form__input">
+                    <div class="solve-form__buttons">
+                        <button class="solve-form__button">Отменить ввод</button>
+                        <button class="solve-form__button">Данные подтверждаю</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item">
+    <section class="cart">
+      <div class="cart__container container">
+          <div class="cart__item">
+              <div class="cart__item-img">
+                  <img src="0757a72c03ef1ae.jpg" alt="coffee">
+                  <span>
+                      <img src="https://www.freeiconspng.com/thumbs/eye-icon/eyeball-icon-png-eye-icon-1.png" alt="eye">
+                  </span>
+              </div>
+              <div class="cart__item-cost">
+                  <span>1000 р.</span>
+              </div>
+              <div class="star-rating">
+                  <input type="radio" name="stars" id="star-a" value="5" />
+                  <label for="star-a"></label>
+
+                  <input type="radio" name="stars" id="star-b" value="4" />
+                  <label for="star-b"></label>
+
+                  <input type="radio" name="stars" id="star-c" value="3" />
+                  <label for="star-c"></label>
+
+                  <input type="radio" name="stars" id="star-d" value="2" />
+                  <label for="star-d"></label>
+
+                  <input type="radio" name="stars" id="star-e" value="1" />
+                  <label for="star-e"></label>
+              </div>
+              <div class="cart__item-desc desc-cart">
+                  <p class="desc-cart__text">Диван "MySofa Белый"</p>
+              </div>
+              <div class="cart__item-buttons button-cart">
+                  <span class="button-cart__country">Россия</span>
+                  <button class="button-cart__red">
+                      <img src="https://cdn-icons-png.flaticon.com/512/1374/1374128.png" alt="button">
+                  </button>
+                  <button class="button-cart__white">
+                      <img src="https://static.vecteezy.com/system/resources/previews/001/188/163/original/heart-png.png" alt="button">
+                  </button>
+                  <button class="button-cart__white">
+                      <img src="https://png.pngtree.com/png-vector/20190129/ourlarge/pngtree-vector-statistics-icon-png-image_420071.jpg" alt="button">
+                  </button>
+              </div>
+              <div class="cart__item-delivery">
+                  <span>Доставка завтра</span>
+                  <span>Самовывоз завтра</span>
+              </div>
+          </div>
+      </div>
+  </section></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+</body>

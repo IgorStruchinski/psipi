@@ -1,0 +1,34 @@
+body {
+    background-color: lightblue;
+}
+h1::first-letter {
+    color: red; /* Цвет первой буквы */
+    font-size: 150%; /* Увеличиваем размер первой буквы */
+}
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: blue; /* Цвет текста ссылок */
+}
+
+a:link {
+    font-weight: bold; /* Жирный шрифт */
+}
+
+a:visited {
+    color: purple; /* Цвет текста посещенных ссылок */
+}
+
+a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+a:active {
+    color: red; /* Цвет текста активной ссылки */
+}
+ol {
+    background-color: lightblue;
+}
+
+ol li {
+    background-color: lightyellow;
+}

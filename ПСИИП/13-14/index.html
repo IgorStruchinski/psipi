@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Личные данные</title>
+  <style id="myStyle">
+    body {
+      background-color: blue;
+      font-family: Verdana, sans-serif;
+      font-size: 14px;
+      color: green;
+    }
+
+    img {
+      border: 1px solid red;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // Получение информации о статусе загрузки документа
+      setTimeout(function() {
+        var statusMessage = "Документ загружен успешно.";
+        var statusNode = document.createElement("p");
+        statusNode.textContent = statusMessage;
+        document.body.appendChild(statusNode);
+
+        // Добавление узла "Место рождения"
+        var birthplaceNode = document.createElement("p");
+        birthplaceNode.textContent = "Место рождения: Беларусь";
+        document.body.appendChild(birthplaceNode);
+      }, 5000);
+
+      // Получение информации об URL-адресе документа
+      setTimeout(function() {
+        var url = window.location.href;
+        window.open("", "URLWindow").document.write("URL-адрес документа: " + url);
+      }, 50);
+    }
+
+    // Функция для изменения стиля
+    function changeStyle() {
+      var myStyle = document.getElementById("myStyle");
+      myStyle.disabled = false;
+    }
+
+    // Функция для валидации формы
+    function validateForm() {
+      var nameInput = document.getElementById("nameInput");
+      var emailInput = document.getElementById("emailInput");
+      var passwordInput = document.getElementById("passwordInput");
+      var isValid = true;
+
+      // Проверка на заполненность полей
+      if (nameInput.value.trim() === "") {
+        alert("Пожалуйста, введите имя.");
+        isValid = false;
+      }
+      if (emailInput.value.trim() === "") {
+        alert("Пожалуйста, введите email.");
+        isValid = false;
+      }
+      if (passwordInput.value.trim() === "") {
+        alert("Пожалуйста, введите пароль.");
+        isValid = false;
+      }
+
+      // Проверка формата ввода email
+      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        alert("Пожалуйста, введите корректный email.");
+        isValid = false;
+      }
+
+      // Проверка длины пароля
+      if (passwordInput.value.length < 8 || passwordInput.value.length > 20) {
+        alert("Пароль должен быть от 8 до 20 символов.");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+</head>
+<body>
+  <p>Стручинский Игорь Сергеевич</p>
+  <img src="example.jpg" alt="Изображение">
+
+  <button onclick="changeStyle()">Изменить стиль</button>
+
+  <form onsubmit="return validateForm()">
+    <label for="nameInput">Имя:</label>
+    <input type="text" id="nameInput" name="nameInput"><br>
+
+    <label for="emailInput">Email:</label>
+    <input type="email" id="emailInput" name="emailInput"><br>
+
+    <label for="passwordInput">Пароль:</label>
+    <input type="password" id="passwordInput" name="passwordInput"><br>
+
+    <input type="submit" value="Отправить">
+  </form>
+</body>
+</html>

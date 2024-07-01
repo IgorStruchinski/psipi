@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания по JavaScript</title>
+    <script>
+        // Задание 1
+        function showCurrentDay() {
+            const currentDay = new Date().getDate();
+            alert(`Текущий день месяца: ${currentDay}`);
+        }
+    </script>
+    <script src="task4.js"></script>
+</head>
+<body>
+    <h1>Задания по JavaScript</h1>
+
+    <!-- Задание 1 -->
+    <button onclick="showCurrentDay()">Показать день</button>
+
+    <!-- Задание 2 -->
+    <h2>Задание 2</h2>
+    <div id="task2"></div>
+    <script>
+        const n = 18;
+        const repeats = n + 5;
+        const fullName = "Стручинский Игорь Сергеевич";
+        let output = "";
+        for (let i = 0; i < repeats; i++) {
+            output += `${i + 1}. ${fullName}<br>`;
+        }
+        document.getElementById("task2").innerHTML = output;
+    </script>
+
+    <!-- Задание 3 -->
+    <h2>Задание 3</h2>
+    <div id="task3"></div>
+    <script>
+        let array = [3, -2, 5, -1, 4];
+        let sum = array.reduce((acc, val) => val > 0 ? acc + val : acc, 0);
+        let sortedArray = [...array].sort((a, b) => a - b);
+
+        document.getElementById("task3").innerHTML = `
+            Исходный массив: ${array}<br>
+            Сумма положительных элементов: ${sum}<br>
+            Отсортированный массив: ${sortedArray}
+        `;
+    </script>
+
+    <!-- Задание 4 -->
+    <h2>Задание 4</h2>
+    <input type="number" id="xInput" placeholder="Введите x">
+    <button onclick="calculateY()">Рассчитать y</button>
+    <div id="task4Result"></div>
+
+    <!-- Задание 5 -->
+    <h2>Задание 5</h2>
+    <div id="task5"></div>
+    <script>
+        let s1 = "Игооооооорь";
+        let s2 = "ПРОГРАММИРОВАНИЕ ЧТЕНИЕ СПОРТ";
+
+        let s1Length = s1.length;
+        let s2Modified = s2.split(" ").join("  ");
+        let s1Modified = s1.replace("ИВАН", "Павел");
+
+        document.getElementById("task5").innerHTML = `
+            Длина строки S1: ${s1Length}<br>
+            Модифицированная S2: ${s2Modified}<br>
+            Модифицированная S1: ${s1Modified}
+        `;
+    </script>
+</body>
+</html>
